@@ -1,38 +1,329 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header{
+  background-color: #2E61E6;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-content{
+  width: 70vw;
+  padding: 40px 0;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+}
+
+.logo-image{
+  width: 40px;
+  margin-right: 10px;
+}
+
+.logo{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.profiles{
+  padding: 0 10px;
+  color: white;
+  font-size: 16px;
+  font-weight: 200;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.profiles::after{
+  display: none;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background-color: white;
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+}
+
+.profiles:hover::before, .profiles:hover::after{
+  display: block;
+}
+
+.profiles::before{
+  display: none;
+  border-radius: 5px;
+  content: 'Se déconnecter';
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  padding: 5px 10px;
+  background-color: white;
+  width: auto;
+  color: black;
+  white-space: nowrap;
+}
+
+
+main{
+  padding: 40px 0;
+  width: 70vw;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
+
+.counter-content{
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.form-search{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button-search{
+  height: 40px;
+  width: 40px;
+  border: none;
+  outline: none;
+  background-color: white;
+  cursor: pointer;
+  color: gray;
+}
+
+.input-search{
+  width: 230px;
+  height: 40px;
+  padding: 5px 0 5px 0px;
+  border: none;
+  outline: none;
+  position: relative;
+  border-bottom: 1px solid #2576DF;
+  position: relative;
+}
+
+
+
+.password-list{
+  border-top: 1px solid rgb(226, 226, 226);
+  margin-top: 40px;
+  list-style: none;
+}
+
+.add-password{
+  color: #2576DF;
+  text-decoration: none;
+}
+
+.password-list li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.list-item-div{
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  width: 100%;
+  position: relative;
+}
+
+.list-item-div i {
+  color: #2576DF;
+}
+
+.list-item-div button, .list-item-div a{
+  text-decoration: none;
+  height: 30px;
+  width: 30px;
+  min-width: 30px;
+  min-height: 30px;
+  margin: 0 5px;
+  color: #2576DF;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.list-item-div button i, .list-item-div a i{
+  transition: 0.5s;
+  position: relative;
+  z-index: 10;
+}
+
+.list-item-div button::before, .list-item-div a::before{
+  /* mix-blend-mode: soft-light; */
+  content: '';
+  height: 0%;
+  width: 0%;
+  position: absolute;
+  border-radius: 100px;
+  background-color: #2E61E6;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.2s;
+}
+
+.list-item-div button:hover i, .list-item-div a:hover i{
+  color: white;
+}
+
+.list-item-div button:hover::before, .list-item-div a:hover::before{
+  height: 100%;
+  width: 100%;
+}
+
+.link{
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.link i {
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.error{
+  margin-top: 40px;
+  color: red;
+}
+
+.success{
+  margin-top: 40px;
+  color: #2576DF;
+}
+
+.password-list-item{
+  cursor: text;
+  border-radius: none;
+  height: 30px;
+  width: 100%;
+  margin-right: 20px;
+  padding-left: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  outline: none;
+}
+
+.form-login-register{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+
+.form-login-register input{
+  height: 30px;
+  margin-bottom: 20px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid #2E61E6;
+  border-radius: 0;
+}
+
+.form-login-register label{
+  margin-bottom: 5px;
+}
+
+.form-login-register button{
+  padding: 10px 0;
+  color: white;
+  background-color: #2576DF;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.form-login-register button:disabled{
+  background-color: rgb(226, 226, 226);
+  cursor: default;
+}
+
+.form-login-register button:disabled:hover{
+  background-color: rgb(226, 226, 226);
+}
+
+.form-login-register button:hover, .form-login-register button:focus{
+  background-color: #2E61E6;
+}
+
+.forget{
+  margin-bottom: 20px;
+  color: #2576DF;
+  text-decoration: none;
+}
+
+
+.name{
+  width: 300px;
+  margin-right: 20px;
+}
+
+.indentifiant{
+  /* width: 800px; */
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  user-select: none;
+  transition: 0.2s;
+}
+
+.notify{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2576DF;
+  padding: 15px 50px;
+  border-radius: 5px;
+  color: white;
+}
+
+.indentifiant:hover{
+  background-color: #cde1fc;
+}
+
+.indentifiant:active{
+  transform: scale(0.95);
+}
+
+.indentifiant i {
+  margin-right: 15px;
+  color: #2576DF;
 }
