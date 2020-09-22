@@ -56,6 +56,7 @@ function Edit(props) {
                 </div>
             </header>
             <main>
+                <h2>Édition de {dataArray.name}</h2>
                 <form autoComplete="off" onSubmit={editPassword} className='form-login-register'>
 
                     <label htmlFor='name'>Nom</label>

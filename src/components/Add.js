@@ -61,6 +61,7 @@ function Add(props) {
                 </div>
             </header>
             <main>
+                <h2>Ajouter un mot de passe</h2>
                 <form autoComplete="off" onSubmit={newPassword} className='form-login-register'>
 
                     <label htmlFor='name'>Nom</label>

@@ -12,7 +12,7 @@ body{
 }
 
 header{
-  background-color: #2E61E6;
+  background-color: #2576DF;
 }
 
 .header-content{
@@ -49,37 +49,25 @@ header{
   align-items: center;
 }
 
-.profiles::after{
-  display: none;
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  background-color: white;
-  content: '';
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 10px;
-  height: 10px;
-}
-
-.profiles:hover::before, .profiles:hover::after{
-  display: block;
+.profiles:hover::before{
+  opacity: 1;
+  
 }
 
 .profiles::before{
-  display: none;
+  pointer-events: none;
+  opacity: 0;
   border-radius: 5px;
   content: 'Se déconnecter';
   position: absolute;
-  bottom: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 12px;
+  left: -80%;
+  font-size: 14px;
   padding: 5px 10px;
   background-color: white;
   width: auto;
   color: black;
   white-space: nowrap;
+  transition: 0.2s;
 }
 
 
@@ -88,6 +76,12 @@ main{
   width: 70vw;
   margin-inline-start: auto;
   margin-inline-end: auto;
+}
+
+main h2:first-child{
+  color: rgb(53, 53, 53);
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .counter-content{
@@ -261,6 +255,7 @@ main{
 
 .form-login-register button{
   padding: 10px 0;
+  font-size: 16px;
   color: white;
   background-color: #2576DF;
   cursor: pointer;
