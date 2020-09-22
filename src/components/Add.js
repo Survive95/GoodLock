@@ -1,6 +1,7 @@
 import React, { createRef, useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FirebaseContext } from './Firebase'
+import AES from 'crypto-js/aes'
 
 function Add(props) {
 
@@ -16,7 +17,7 @@ function Add(props) {
                 {
                     name: name.current.value,
                     identifiant: identifiant.current.value,
-                    password: password.current.value,
+                    password: AES.encrypt(password.current.value, localStorage.getItem('token')).toString(),
                     website: website.current.value
                 }
             ],
@@ -30,6 +31,7 @@ function Add(props) {
 
         })
     }
+
 
 
 

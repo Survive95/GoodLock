@@ -63,6 +63,13 @@ function Home(props) {
 
     }
 
+    //Data = le mot de passe a crypter
+    //password = la clé de chiffrage
+    // console.log(AES.encrypt('data', 'password').toString());
+    // console.log(AES.decrypt('U2FsdGVkX1/tXudbVsdVYMFyywtaqolusezHoMxUOd0=', 'password').toString(CryptoJS.enc.Utf8));
+    
+
+
     const search = () => {
         let input = searchInput.current
         let filter = input.value.toUpperCase();
