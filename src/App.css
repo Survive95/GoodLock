@@ -61,6 +61,7 @@ header{
   content: 'Se déconnecter';
   position: absolute;
   left: 0;
+  text-align: center;
   font-size: 16px;
   padding: 5px 10px;
   background-color: #2576DF;
@@ -107,6 +108,7 @@ main h2:first-child{
 }
 
 .input-search{
+  border-radius: 0;
   width: 230px;
   height: 40px;
   padding: 5px 0 5px 0px;
@@ -181,7 +183,7 @@ main h2:first-child{
   width: 0%;
   position: absolute;
   border-radius: 100px;
-  background-color: #2E61E6;
+  background-color: #cde1fc;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -189,7 +191,7 @@ main h2:first-child{
 }
 
 .list-item-div button:hover i, .list-item-div a:hover i{
-  color: white;
+  color: #2576DF;
 }
 
 .list-item-div button:hover::before, .list-item-div a:hover::before{
@@ -248,6 +250,7 @@ main h2:first-child{
   background-color: transparent;
   border-bottom: 1px solid #2E61E6;
   border-radius: 0;
+  font-size: 14px;
 }
 
 .form-login-register label{

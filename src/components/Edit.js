@@ -1,6 +1,8 @@
 import React, { createRef, useEffect, useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FirebaseContext } from './Firebase'
+import AES from 'crypto-js/aes'
+import CryptoJS from 'crypto-js'
 
 function Edit(props) {
 
@@ -15,12 +17,14 @@ function Edit(props) {
         .then( doc => {
             if(doc && doc.exists){
                 const allUserData = doc.data()
+                allUserData.data[props.match.params.id].password = AES.decrypt(allUserData.data[props.match.params.id].password, localStorage.getItem('token')).toString(CryptoJS.enc.Utf8)
                 setUserData(allUserData)
                 setDataArray(allUserData.data[props.match.params.id])
             }
         })
         .catch()
     }, [])
+
 
 
     const name = createRef()
@@ -33,7 +37,7 @@ function Edit(props) {
         let array = [...userData.data]
         array[props.match.params.id].name = name.current.value
         array[props.match.params.id].identifiant = identifiant.current.value
-        array[props.match.params.id].password = password.current.value
+        array[props.match.params.id].password = AES.encrypt(password.current.value, localStorage.getItem('token')).toString()
         array[props.match.params.id].website = website.current.value
 
         firebase.addData(localStorage.getItem('token')).set({
