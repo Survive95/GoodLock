@@ -9,12 +9,14 @@
     "axios": "^0.20.0",
     "crypto-js": "^4.0.0",
     "firebase": "^7.21.0",
+    "generate-password": "^1.5.1",
     "md5": "^2.3.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
-    "reverse-md5": "^0.0.4"
+    "reverse-md5": "^0.0.4",
+    "uid": "^1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

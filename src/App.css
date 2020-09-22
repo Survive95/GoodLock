@@ -248,7 +248,7 @@ main h2:first-child{
   border: none;
   outline: none;
   background-color: transparent;
-  border-bottom: 1px solid #2E61E6;
+  border-bottom: 1px solid #2576DF;
   border-radius: 0;
   font-size: 14px;
 }
@@ -284,6 +284,24 @@ main h2:first-child{
   margin-bottom: 20px;
   color: #2576DF;
   text-decoration: none;
+}
+
+.form-login-register .randomPasswordButton{
+  width: 50%;
+  font-size: 14px;
+  background-color: white;
+  color: #2576DF;
+  border: 1px solid #2576DF;
+  margin-bottom: 20px;
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: 0.2s;
+  user-select: none;
+}
+
+.form-login-register .randomPasswordButton:hover{
+  background-color: #2576DF;
+  color: white;
 }
 
 

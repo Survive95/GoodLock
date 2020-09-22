@@ -2,6 +2,7 @@ import React, { createRef, useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FirebaseContext } from './Firebase'
 import AES from 'crypto-js/aes'
+import generator from 'generate-password'
 
 function Add(props) {
 
@@ -30,6 +31,17 @@ function Add(props) {
         .catch(err => {
 
         })
+    }
+
+
+    const randomPassword = e => {
+        e.preventDefault()
+        let pwd = generator.generate({
+            length : 16,
+            numbers : true,
+            symbols : true
+        })
+        password.current.value = pwd
     }
 
 
@@ -74,6 +86,7 @@ function Add(props) {
 
                     <label htmlFor='password' >Mot de passe</label>
                     <input autoComplete="off" ref={password} required id="password" type="text"></input>
+                    <p onClick={randomPassword} className="randomPasswordButton">Générer un mot de passe</p>
 
                     <label htmlFor='website' >Site Web</label>
                     <input ref={website} placeholder="Ex : http://www.facebook.com" id="website" type="url"></input>
