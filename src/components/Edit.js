@@ -19,7 +19,6 @@ function Edit(props) {
                 const allUserData = doc.data()
                 allUserData.data[props.match.params.id].password = AES.decrypt(allUserData.data[props.match.params.id].password, localStorage.getItem('token')).toString(CryptoJS.enc.Utf8)
                 setUserData(allUserData)
-                allUserData.data.sort((a, b) => (a.name > b.name) ? 1 : (a.name === b.name) ? ((a.size > b.size) ? 1 : -1) : -1 )
                 setDataArray(allUserData.data[props.match.params.id])
             }
         })
