@@ -43,7 +43,6 @@ function Login(props) {
             <header>
                 <div className="header-content">
                     <Link to="/" className="logo"><img className="logo-image" src={logo} alt="logo-image"></img>Goodlock</Link>
-                    <Link className="link" to="/register">S'enregistrer <i className="fas fa-arrow-right"></i></Link>
                 </div>
             </header>
             <main>
@@ -57,7 +56,10 @@ function Login(props) {
                     <label htmlFor='password' >Mot de passe</label>
                     <input onChange={(e) => setPassword(e.target.value)} value={password} id="password" type="password"></input>
 
-                    <Link className="forget" to="/forgetpassword">Mot de passe oublié ?</Link>
+                    <div className="form-div-link">
+                        <Link className="forget" to="/register">S'inscrire</Link>
+                        <Link className="forget" to="/forgetpassword">Mot de passe oublié ?</Link>
+                    </div>
                     
                     {loginBtn ? <button>Se connecter</button> : <button disabled >Se connecter</button>}
                 </form>

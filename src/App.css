@@ -39,11 +39,11 @@ header{
 }
 
 .profiles{
-  padding: 2px 10px;
   color: white;
   font-size: 16px;
   font-weight: 200;
   cursor: pointer;
+  text-align: right;
   position: relative;
   display: flex;
   align-items: center;
@@ -61,9 +61,8 @@ header{
   content: 'Se déconnecter';
   position: absolute;
   left: 0;
-  text-align: center;
+  text-align: right;
   font-size: 16px;
-  padding: 5px 10px;
   background-color: #2576DF;
   width: 100%;
   color: white;
@@ -226,9 +225,9 @@ main h2:first-child{
   border-radius: none;
   height: 30px;
   width: 100%;
-  min-width: 200px;
+  min-width: 300px;
   margin-right: 20px;
-  padding-left: 10px;
+  padding-left: 15px;
   background-color: transparent;
   border: none;
   font-size: 18px;
@@ -278,6 +277,12 @@ main h2:first-child{
 
 .form-login-register button:hover, .form-login-register button:focus{
   background-color: #2E61E6;
+}
+
+.form-div-link{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .forget{

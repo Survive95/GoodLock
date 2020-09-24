@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Home from './components/Home';
@@ -7,9 +7,16 @@ import Register from './components/Register';
 import Add from './components/Add';
 import ForgetPassword from './components/ForgetPassword';
 import Edit from './components/Edit';
-
+import { FirebaseContext } from './components/Firebase'
 
 function App() {
+
+  const firebase = useContext(FirebaseContext)
+
+  window.addEventListener('beforeunload', () => {
+    firebase.signoutUser()
+    localStorage.removeItem('token')
+  })
   
   return (
     <div className="App">

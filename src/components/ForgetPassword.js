@@ -34,7 +34,6 @@ function ForgetPassword(props) {
             <header>
                 <div className="header-content">
                     <Link to="/" className="logo"><img className="logo-image" src={logo} alt="logo-image"></img>Goodlock</Link>
-                    <Link className="link" to="/login">Se connecter <i className="fas fa-arrow-right"></i></Link>
                 </div>
             </header>
             <main>
@@ -45,6 +44,8 @@ function ForgetPassword(props) {
 
                     <label htmlFor='email'>Adresse mail</label>
                     <input onChange={e => setEmail(e.target.value)} value={email} required id="email" type="email"></input>
+
+                    <Link className="forget" to="/login">Se connecter</Link>
 
                     {email === '' ? <button disabled>Réinitialiser le mot de passe</button> : <button>Réinitialiser le mot de passe</button>}
                 </form>

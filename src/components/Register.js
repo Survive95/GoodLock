@@ -51,7 +51,6 @@ function Register(props){
             <header>
                 <div className="header-content">
                     <Link to="/" className="logo"><img className="logo-image" src={logo} alt="logo-image"></img>Goodlock</Link>
-                    <Link className="link" to="/login">Se connecter <i className="fas fa-arrow-right"></i></Link>
                 </div>
             </header>
             <main>
@@ -70,6 +69,8 @@ function Register(props){
 
                     <label htmlFor='confirmPassword' >Comfirmer le mot de passe</label>
                     <input onChange={handleChange} value={confirmPassword} autoComplete="off" required id="confirmPassword" type="password"></input>
+
+                    <Link className="forget" to="/login">Se connecter</Link>
 
                     {buttonCheck}
                 </form>

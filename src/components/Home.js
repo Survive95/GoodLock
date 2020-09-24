@@ -32,6 +32,7 @@ function Home(props) {
                 .then(doc => {
                     if (doc && doc.exists) {
                         const allUserData = doc.data()
+                        console.log(allUserData.data);
                         setUserData(allUserData)
                         setAllPassword(allUserData.data)
                     }
@@ -91,6 +92,8 @@ function Home(props) {
     }
 
     const searchInput = createRef()
+
+    allPassword.sort((a, b) => (a.name > b.name) ? 1 : (a.name === b.name) ? ((a.size > b.size) ? 1 : -1) : -1 )
 
     return (
         <>
