@@ -24,6 +24,7 @@ function App() {
 
   caches.delete('workbox-precache-v2-https://good-lock.vercel.app/')
   
+  
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     setDefferedPrompt(e)
