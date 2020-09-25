@@ -8,7 +8,6 @@ import Add from './components/Add';
 import ForgetPassword from './components/ForgetPassword';
 import Edit from './components/Edit';
 import { FirebaseContext } from './components/Firebase'
-import { cache } from 'sw-toolbox';
 
 
 function App() {
@@ -23,7 +22,8 @@ function App() {
   const [defferedPrompt, setDefferedPrompt] = useState(null)
   const [installBtn, setInstallBtn] = useState(false)
 
-
+  caches.delete('workbox-precache-v2-https://good-lock.vercel.app/')
+  
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     setDefferedPrompt(e)
