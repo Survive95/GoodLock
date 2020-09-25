@@ -41,7 +41,11 @@ function App() {
       setDefferedPrompt(null)
     });
   }
-  
+
+  const handleInstall = () => {
+    setInstallBtn(false)
+  }
+
   return (
     <div className="App">
       <Router>
@@ -52,7 +56,13 @@ function App() {
         <Route exact path="/forgetpassword" component={ForgetPassword}></Route>
         <Route exact path="/edit/:id" component={Edit}></Route>
       </Router>
-      {installBtn ? <button onClick={install} className="installer"><i className="fas fa-download"></i></button> : ''}
+      {installBtn ? <div className="installer-container">
+        <p>Ajouter GoodLock à la page d'accueil</p>
+        <div>
+          <button onClick={handleInstall}>Ne plus afficher</button>
+          <button onClick={install}>Ajouter</button>
+        </div>
+      </div> : ''}
     </div>
   );
 }
