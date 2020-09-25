@@ -8,7 +8,7 @@ import Add from './components/Add';
 import ForgetPassword from './components/ForgetPassword';
 import Edit from './components/Edit';
 import { FirebaseContext } from './components/Firebase'
-import './serviceWorker'
+import sw from './serviceWorker'
 
 
 function App() {
@@ -19,21 +19,6 @@ function App() {
     firebase.signoutUser()
     localStorage.removeItem('token')
   })
-
-  if('serviceWorker' in navigator){
-    window.addEventListener('load', function(){
-      navigator.serviceWorker.register('./serviceWorker.js').then(
-        function(registration){
-          //Resgistration was successful
-          console.log('ServiceWorker registration successful with scope : ', registration.scope);
-        },
-        function(err){
-          //Resgistration was failed
-          console.log('ServiceWorker registration failed: ', err);
-        }
-      )
-    })
-  }
   
   return (
     <div className="App">
