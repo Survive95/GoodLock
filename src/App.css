@@ -416,5 +416,10 @@ main h2:first-child{
     width: 100%;
   }
   
+  .notify{
+    width: 90%;
+    text-align: center;
+    z-index: 100000;
+  }
 
 }
