@@ -292,7 +292,8 @@ main h2:first-child{
 }
 
 .form-login-register .randomPasswordButton{
-  width: 50%;
+  width: 250px;
+  text-align: center;
   font-size: 14px;
   background-color: white;
   color: #2576DF;
@@ -347,4 +348,73 @@ main h2:first-child{
 .indentifiant i {
   margin-right: 15px;
   color: #2576DF;
+}
+
+
+@media (max-width:1450px){
+  .header-content{
+    width: 90vw;
+  }
+
+  main{
+    width: 90vw;
+  }
+}
+
+@media (max-width:1150px){
+  .header-content{
+    width: 98vw;
+  }
+
+  main{
+    width: 98vw;
+  }
+}
+
+@media (max-width:1050px){
+  .header-content{
+    width: 90vw;
+  }
+
+  main{
+    width: 90vw;
+  }
+
+  .password-list{
+    margin: 0;
+  }
+
+  .password-list li{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .password-list-item{
+    min-width: 50px;
+  }
+
+  .list-item-div{
+    margin: 0;
+  }
+
+  .indentifiant{
+    padding: 10px 10px 10px 0;
+  }
+
+  .form-search{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .input-search{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .form-login-register{
+    width: 100%;
+  }
+  
+
 }
