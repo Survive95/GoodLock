@@ -8,7 +8,6 @@ import Add from './components/Add';
 import ForgetPassword from './components/ForgetPassword';
 import Edit from './components/Edit';
 import { FirebaseContext } from './components/Firebase'
-import sw from './serviceWorker'
 
 
 function App() {
