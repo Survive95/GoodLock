@@ -1,0 +1,38 @@
+[
+    {
+        "label" : "Twitter",
+        "fa" : "fab fa-twitter",
+        "url" : {
+            "android" : "intent://twitter.com/#Intent;package=com.twitter.android;scheme=https;end"
+        }
+    },
+    {
+        "label" : "Facebook",
+        "fa" : "fab fa-facebook",
+        "url": {
+            "android" : "intent://#Intent;package=com.facebook.katana;scheme=fb://;end"
+        }
+    },
+    {
+        "label" : "Youtube",
+        "fa" : "fab fa-youtube",
+        "url" : {
+            "android" : "intent://www.youtube.com/#Intent;package=com.google.android.youtube;scheme=https;end"
+        }
+    },
+    {
+        "label" : "Twitch",
+        "fa" : "fab fa-twitch",
+        "url" : {
+            "android" : "twitch://open"
+        }
+    },
+    {
+        "label" : "TikTok",
+        "fa" : "fab fa-tiktok",
+        "url" : {
+            "android" : "intent://home#Intent;package=com.zhiliaoapp.musically;scheme=snssdk1233;end"
+        }
+    }
+    
+]

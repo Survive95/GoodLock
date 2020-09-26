@@ -13,7 +13,7 @@ function Add(props) {
     const newPassword = (e) => {
         e.preventDefault();
         firebase.addData(localStorage.getItem('token')).set({
-            data : [
+            data: [
                 ...userData.data,
                 {
                     name: name.current.value,
@@ -22,24 +22,25 @@ function Add(props) {
                     website: website.current.value
                 }
             ],
-            pseudo : userData.pseudo
+            pseudo: userData.pseudo
         })
-        .then(() => {
-            props.history.push('/')
+            .then(() => {
+                props.history.push('/')
 
-        })
-        .catch(err => {
+            })
+            .catch(err => {
 
-        })
+            })
     }
+
 
 
     const randomPassword = e => {
         e.preventDefault()
         let pwd = generator.generate({
-            length : 16,
-            numbers : true,
-            symbols : true
+            length: 16,
+            numbers: true,
+            symbols: true
         })
         password.current.value = pwd
     }
@@ -50,16 +51,16 @@ function Add(props) {
 
     useEffect(() => {
         firebase.authUser(localStorage.getItem('token')).get()
-        .then( doc => {
-            if(doc && doc.exists){
-                const allUserData = doc.data()
-                setUserData(allUserData)
-            }
-        })
-        .catch()
+            .then(doc => {
+                if (doc && doc.exists) {
+                    const allUserData = doc.data()
+                    setUserData(allUserData)
+                }
+            })
+            .catch()
 
     }, [firebase])
-    
+
 
     const name = createRef()
     const identifiant = createRef()

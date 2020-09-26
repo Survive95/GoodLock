@@ -22,7 +22,7 @@ function App() {
   const [defferedPrompt, setDefferedPrompt] = useState(null)
   const [installBtn, setInstallBtn] = useState(false)
 
-  caches.delete('workbox-precache-v2-https://good-lock.vercel.app/')
+  // caches.delete('workbox-precache-v2-https://good-lock.vercel.app/')
   
   
   window.addEventListener('beforeinstallprompt', (e) => {

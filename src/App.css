@@ -157,6 +157,10 @@ main h2:first-child{
   list-style: none;
 }
 
+.password-button-container{
+  display: flex;
+}
+
 .add-password{
   color: #2576DF;
   text-decoration: none;
@@ -172,9 +176,15 @@ main h2:first-child{
 .list-item-div{
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-left: 40px;
   width: 100%;
   position: relative;
+}
+
+.password-container{
+  display: flex;
+  align-items: center;
 }
 
 .list-item-div i {
@@ -383,6 +393,7 @@ main h2:first-child{
 }
 
 
+
 @media (max-width:1450px){
   .header-content{
     width: 90vw;
@@ -415,10 +426,39 @@ main h2:first-child{
 
   .password-list-item{
     min-width: 50px;
+    margin-right: 0;
   }
 
   .list-item-div{
     margin: 0;
+  }
+
+  .list-item-div{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .password-container{
+    width: 100%;
+  }
+
+  .password-button-container{
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .password-button-container button, .password-button-container a{
+    height: 40px;
+    background-color: white;
+    box-shadow: 0 0 5px 0 rgb(219, 219, 219);
+    width: 40px;
+    margin: 0;
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+
+  .password-button-container button::before , .password-button-container a::before{
+    display: none;
   }
 
   .indentifiant{
