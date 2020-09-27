@@ -74,7 +74,7 @@ function Edit(props) {
                     <label htmlFor='website' >Site Web</label>
                     <input defaultValue={dataArray.website} ref={website} placeholder="Ex : http://www.facebook.com" id="website" type="url"></input>
 
-                    <button>Modifié</button>
+                    <button>Modifier</button>
                 </form>
             </main>
         </>
