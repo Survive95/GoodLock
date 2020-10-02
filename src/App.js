@@ -60,7 +60,7 @@ function App() {
         <Route exact path="/edit/:id" component={Edit}></Route>
       </Router>
       {installBtn ? <div className="installer-container">
-        <p>Ajouter GoodLock à la page d'accueil</p>
+        <p>Installer GoodLock</p>
         <div>
           <button onClick={handleInstall}>Ne plus afficher</button>
           <button onClick={install}>Ajouter</button>
