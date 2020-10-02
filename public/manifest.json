@@ -20,7 +20,7 @@
     }
   ],
   "start_url": ".",
-  "display": "browser",
+  "display": "minimal-ui",
   "theme_color": "#2576DF",
   "background_color": "#2576DF"
 }
